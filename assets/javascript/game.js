@@ -1,24 +1,29 @@
+//------
+//------
 //random pick of band names
 var things = ['rock', 'paper', 'scissor'];
 var thing = things[Math.floor(Math.random() * things.length)];
 console.log(thing)
 
-
+//---------------------------------------------------------------
 //number of characters
 var n = thing.length;
 console.log(n)
 
-
+//--------------------------------------------------------------
 //create spaces
-
 var spaces = [];
 for (var i = 0; i < n; i++) {
     spaces[i] = "_";
     console.log(spaces)
+
     document.getElementById("character-spaces").innerHTML = spaces;
+
+//--------------------------------------------------------------
+//key stroke events
     document.onkeyup = function (event) {
         var letter = String.fromCharCode(event.which).toLowerCase();
-
+//---------------------------------------------------------------
         var first_character = thing.charAt(0);
         console.log(first_character)
         if (letter === first_character) {
@@ -70,27 +75,30 @@ for (var i = 0; i < n; i++) {
         console.log(spaces)
 
 
-
-        // document.getElementById("demo").onkeypress = function() {myFunction()
-        
-        //     console.log (demo)
-
-        };
-        
-
-// function myFunction() {
-//     document.getElementById("demo").style.backgroundColor = "red";
-
+   
+//---------------------------------------------------------------
+//open araay to store used characters
+var used_characters = [];
+var length = used_characters.length;
+    used_characters[length] = letter;
+    
+var used_characters2 = used_characters
+    used_characters.push.apply(used_characters, used_characters2);
 
 
+document.getElementById("used-characters").innerHTML = used_characters;
+console.log(used_characters)
+}
 
-    //set number of spaces to be used "character count"
-    function myFunction() {
-        // var str = thing;
-        var n = thing.length;
-        document.getElementById("character-no").innerHTML = thing;
-        console.log(thing)
-    }
+
+
+// guessBox.addEventListener("keydown", function (e) {
+//     if (e.keyCode === 13 && e.target.value.length === 1) {
+//       if (!guess(e.target.value)) {
+//         mistakes++;
+//         missed.push(e.target.value);
+//         drawPerson(mistakes);
+    };
 
 
 
@@ -103,13 +111,9 @@ for (var i = 0; i < n; i++) {
     document.getElementById("character-length").innerHTML = "Number of letters in word    " + n;
     document.getElementById("character-no").innerHTML = "Word to find     " + thing;
     // console.log(letter)
-}
 
 
-// var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// document.getElementById("demo1").innerHTML = fruits;
-// fruits[0] = "Kiwi";
-// document.getElementById("demo2").innerHTML = fruits;
+
 
 
 
@@ -118,6 +122,3 @@ for (var i = 0; i < n; i++) {
 //tally count down from max number of tries
 
 //used charactor list 
-
-
-
