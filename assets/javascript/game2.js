@@ -103,13 +103,34 @@ for (var i = 0; i < n; i++) {
         console.log(used_characters)
     }
 
+    var clicked = false;
 
+    function SwitchPic(pic) {
+        var image = document.getElementById(pic);
+        if(!clicked){
+            image.src = "otherImg.png";
+            clicked = true;
+        }else{
+            image.src = "img.png";
+            clicked = false;
+        }
 
 
 };
 
 
+var clicked = false;
 
+function SwitchPic(pic) {
+    var image = document.getElementById(pic);
+    if(!clicked){
+        image.src = "otherImg.png";
+        clicked = true;
+    }else{
+        image.src = "img.png";
+        clicked = false;
+    }
+}
 
 
 
