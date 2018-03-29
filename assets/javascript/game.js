@@ -1,11 +1,12 @@
 //------
 //------
 //random pick of band names
-var things = ['rock', 'paper', 'scissor'];
+var things = ['harmonica', 'guitar', 'banjo', 'mandolin', 'piano','drum'];
 var thing = things[Math.floor(Math.random() * things.length)];
 console.log(thing)
 var used_characters = [];
-var tries_remaining = 25
+var tries_remaining = 5
+
 
 //---------------------------------------------------------------
 //number of characters
@@ -23,7 +24,7 @@ for (var i = 0; i < n; i++) {
 
     //--------------------------------------------------------------
     //key stroke events
-         document.onkeyup = function (event) {
+    document.onkeyup = function (event) {
         var letter = String.fromCharCode(event.which).toLowerCase();
 
 
@@ -82,26 +83,36 @@ for (var i = 0; i < n; i++) {
 
         //---------------------------------------------------------------
         //open araay to store used characters
-       
-        
 
 
-       if ( used_characters.includes(letter) == false){
-           used_characters.push (letter);
-           if(thing.indexOf(letter) === -1){
-            tries_remaining--;
-
-           }
-       }
 
 
+        if (used_characters.includes(letter) == false) {
+            used_characters.push(letter);
+            //tally count down from max number of tries
+            if (thing.indexOf(letter) === -1) {
+                tries_remaining--;
+                if (tries_remaining === 0) {
+
+                    alert("Your Dead!! Press ok to start again.")
+                    window.location.reload()
+                }
+
+            }
+        }
+
+        //used charactor list
         var length = used_characters.length;
         document.getElementById("used-characters").innerHTML = used_characters;
         console.log(used_characters)
 
-            
-    console.log(tries_remaining);
-    document.getElementById("tries-remaining").innerHTML = "Tries remaining    " + tries_remaining;
+        //tallies the missed count
+        console.log(tries_remaining);
+        document.getElementById("tries-remaining").innerHTML = "Tries remaining    " + tries_remaining;
+
+        //changes the instructions to good luck
+        console.log(tries_remaining);
+        document.getElementById("insturctions").innerHTML = "Good luck here you go!    ";
     }
 
 
@@ -110,12 +121,7 @@ for (var i = 0; i < n; i++) {
 
 
 
-
-
-
-
-
-document.getElementById("character-length").innerHTML = "Number of letters in word    " + n;
+document.getElementById("character-length").innerHTML = "Your word has    " + n +"  letters";
 document.getElementById("character-no").innerHTML = "Word to find     " + thing;
     // console.log(letter)
 
@@ -126,6 +132,5 @@ document.getElementById("character-no").innerHTML = "Word to find     " + thing;
 
 //picture of hangman as game progresses
 
-//tally count down from max number of tries
 
-//used charactor list 
+
