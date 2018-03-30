@@ -3,7 +3,7 @@
 .jumbotron {
     padding: 2rem 1rem;
     margin:0 auto 2rem;
-    background-color: purple;
+    background-color: rgb(18, 5, 94);
     border-radius: 2rem;
 }
 
@@ -11,11 +11,49 @@
     margin: 0 auto;
     height: 400px;
     border-radius: 2rem;
-    background: url('hangman1.jpg') no-repeat ;
-    background-size: 100% 100%;
-
 }
 
+.game--backdrop1{
+    background: url('hangman1.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+
+.game--backdrop2{
+    background: url('hangman2.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop3{
+    background: url('hangman3.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop4{
+    background: url('hangman4.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop5{
+    background: url('hangman5.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop6{
+    background: url('hangman6.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop7{
+    background: url('hangman7.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop8{
+    background: url('hangman8.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop9{
+    background: url('hangman9.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
+.game--backdrop10{
+    background: url('hangman10.jpg') no-repeat ;
+    background-size: 100% 100%;
+}
 #insturctions{
     margin: 0 auto;
     text-align: center;
