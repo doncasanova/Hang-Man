@@ -24,7 +24,7 @@ function update_try(used_characters, tries_remaining, n, thing, init) {
     document.getElementById("insturctions").innerHTML = "Good luck here you go!    ";
 
     document.getElementById("character-length").innerHTML = "Your word has    " + n + "  letters";
-    document.getElementById("character-no").innerHTML = "Word to find      " + thing + init;
+    document.getElementById("character-no").innerHTML = + init;
 }
 //---------------------------------------------------------------
 //number of characters
@@ -40,7 +40,7 @@ for (var i = 0; i < n; i++) {
 
     document.getElementById("character-spaces").innerHTML = spaces;
     //-------------------------------------------------------------
-    update_try(used_characters, tries_remaining, n, thing, "Game initialized")
+    update_try(used_characters, tries_remaining, n, thing, "")
     //--------------------------------------------------------------
     //key stroke events
     document.onkeyup = function (event) {
@@ -107,16 +107,16 @@ for (var i = 0; i < thing.length; i++){
                 picture++
                 console.log(picture + "picture count")
                 $('.game--backdrop').removeClass("game--backdrop1").addClass('game--backdrop' + picture);
-                if (tries_remaining === 0) {
+               
 
-                    alert("Your Dead!! Press ok to start again.")
-                    window.location.reload()
-                }
-
+            }
+            if (picture === 11) {
+                alert("Your Dead!! Press ok to start again.")
+                window.location.reload()
             }
         }
 
-        update_try(used_characters, tries_remaining, n, thing, "End of P")
+        update_try(used_characters, tries_remaining, n, thing, "")
     }
 
 
