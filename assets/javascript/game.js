@@ -36,13 +36,15 @@ console.log(n + "  letters in word")
 //--------------------------------------------------------------
 //create spaces
 var spaces = [];
-for (var i = 0; i < n; i++) {
+for (var i = 0; i < thing.length; i++) {
     spaces[i] = "_";
     console.log(spaces + "  array spaces for word")
 
     //----------------------------------------------------------
     //changes the html to show word spaces
     document.getElementById("character-spaces").innerHTML = spaces;
+    console.log(n)
+    
 
     //----------------------------------------------------------
     update_try(used_characters, tries_remaining, n, thing, "")
@@ -70,11 +72,19 @@ for (var i = 0; i < n; i++) {
                 n--
                 console.log("correct letter count  " + n)
 
+    
+            }
+            document.getElementById("character-spaces").innerHTML = spaces.join();
+            console.log(n)
+            if (letter === first_character) {
+            
                 if (n <= 0) {
+                    console.log(spaces)
                     alert("you won!!!")
                 }
+
+               
             }
-            document.getElementById("character-spaces").innerHTML = spaces;
         }
 
 

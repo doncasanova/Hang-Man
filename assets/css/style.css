@@ -1,6 +1,6 @@
 
 body{
-    border-radius: 2rem; background: url("IMG_2649 (1).JPG") no-repeat ;
+    border-radius: 2rem; background: url("../images/IMG_2649.JPG") no-repeat ;
     background-size: 100% 100%;
 }
 
@@ -9,7 +9,7 @@ body{
     padding: 2rem 1rem;
     margin:0 auto 2rem;
     background-color: rgb(18, 5, 94);
-    opacity: .96;
+    opacity: .9;
     border-radius: 2rem;
    
 }
@@ -22,26 +22,26 @@ body{
 }
 
 .game--backdrop1{
-    background: url("hangman1.jpg") no-repeat ;
+    background: url("../images/hangman1.jpg") no-repeat ;
     background-size: 100% 100%;
   
 }
 
 .game--backdrop2{
-    background: url('hangman2.jpg') no-repeat ;
+    background: url('../images/hangman2.jpg') no-repeat ;
     background-size: 100% 100%;
     
 }
 .game--backdrop3{
-    background: url('hangman3.jpg') no-repeat ;
+    background: url('../images/hangman3.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop4{
-    background: url('hangman4.jpg') no-repeat ;
+    background: url('../images/hangman4.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop5{
-    background: url('hangman5.jpg') no-repeat ;
+    background: url('../images/hangman5.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop6{
@@ -49,19 +49,19 @@ body{
     background-size: 100% 100%;
 }
 .game--backdrop7{
-    background: url('hangman7.jpg') no-repeat ;
+    background: url('../images/hangman7.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop8{
-    background: url('hangman8.jpg') no-repeat ;
+    background: url('../images/hangman8.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop9{
-    background: url('hangman9.jpg') no-repeat ;
+    background: url('../images/hangman9.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop10{
-    background: url('hangman10.jpg') no-repeat ;
+    background: url('../images/hangman10.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 #insturctions{
