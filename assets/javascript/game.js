@@ -44,7 +44,7 @@ for (var i = 0; i < thing.length; i++) {
     //changes the html to show word spaces
     document.getElementById("character-spaces").innerHTML = spaces;
     console.log(n)
-    
+
 
     //----------------------------------------------------------
     update_try(used_characters, tries_remaining, n, thing, "")
@@ -72,18 +72,21 @@ for (var i = 0; i < thing.length; i++) {
                 n--
                 console.log("correct letter count  " + n)
 
-    
+
             }
             document.getElementById("character-spaces").innerHTML = spaces.join();
             console.log(n)
             if (letter === first_character) {
-            
+
                 if (n <= 0) {
                     console.log(spaces)
-                    alert("you won!!!")
+                    setTimeout(function () {
+                        alert("you won!!!");
+                    }, 50);
+
                 }
 
-               
+
             }
         }
 
@@ -94,8 +97,10 @@ for (var i = 0; i < thing.length; i++) {
         //open araay to store used characters
         if (picture === 10) {
             tries_remaining--
-            update_try(tries_remaining)
+            setTimeout(function () {
+            }, 50);
             alert("Your Dead!! Press ok to start again.")
+
             window.location.reload()
         }
 
@@ -113,7 +118,7 @@ for (var i = 0; i < thing.length; i++) {
             }
 
         }
-       
+
         update_try(used_characters, tries_remaining, n, thing, "")
 
     }// endonkeyup

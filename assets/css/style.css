@@ -45,7 +45,7 @@ body{
     background-size: 100% 100%;
 }
 .game--backdrop6{
-    background: url('hangman6.jpg') no-repeat ;
+    background: url('../images/hangman6.jpg') no-repeat ;
     background-size: 100% 100%;
 }
 .game--backdrop7{
