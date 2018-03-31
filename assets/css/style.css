@@ -9,25 +9,28 @@ body{
     padding: 2rem 1rem;
     margin:0 auto 2rem;
     background-color: rgb(18, 5, 94);
-    opacity: .9;
+    opacity: .96;
+    border-radius: 2rem;
+   
 }
 
 .game--backdrop{
     margin: 0 auto;
     height: 400px;
     border-radius: 2rem;
-    opacity: 1.0;
+   
 }
 
 .game--backdrop1{
     background: url("hangman1.jpg") no-repeat ;
     background-size: 100% 100%;
-    opacity: 1.0;
+  
 }
 
 .game--backdrop2{
     background: url('hangman2.jpg') no-repeat ;
     background-size: 100% 100%;
+    
 }
 .game--backdrop3{
     background: url('hangman3.jpg') no-repeat ;

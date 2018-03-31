@@ -3,7 +3,7 @@
 //random pick of band names
 var things = ['harmonica', 'guitar', 'banjo', 'mandolin', 'piano', 'drum'];
 var thing = things[Math.floor(Math.random() * things.length)];
-//--------------------------------------------------------------
+console.log(thing)
 var used_characters = [];
 var tries_remaining = 10
 var correct_letter = 0
@@ -27,27 +27,23 @@ function update_try(used_characters, tries_remaining, n, thing, init) {
     document.getElementById("character-length").innerHTML = "Your word has    " + word_length + "  letters";
     document.getElementById("character-no").innerHTML = "Your word is something played a band";
 }
-//--------------------------------------------------------------
+//---------------------------------------------------------------
 //number of characters
 var n = thing.length;
 var word_length = n
-console.log(n + "  letters in word")
+console.log(n)
 
 //--------------------------------------------------------------
 //create spaces
 var spaces = [];
 for (var i = 0; i < n; i++) {
     spaces[i] = "_";
-    console.log(spaces + "  array spaces for word")
+    console.log(spaces)
 
-    //----------------------------------------------------------
-    //changes the html to show word spaces
     document.getElementById("character-spaces").innerHTML = spaces;
-
-    //----------------------------------------------------------
+    //-------------------------------------------------------------
     update_try(used_characters, tries_remaining, n, thing, "")
-
-    //----------------------------------------------------------
+    //--------------------------------------------------------------
     //key stroke events
     document.onkeyup = function (event) {
         var letter = String.fromCharCode(event.which).toLowerCase();
@@ -59,24 +55,24 @@ for (var i = 0; i < n; i++) {
                 console.log(correct_letter + "   correct letter count")
             }
         }
-        for (var i = 0; i < thing.length; i++) {
+for (var i = 0; i < thing.length; i++){
 
 
-            //----------------------------------------------------
-            var first_character = thing.charAt(i);
-            console.log(first_character)
-            if (letter === first_character) {
-                spaces[i] = letter;
-                n--
-                console.log("correct letter count  " + n)
-
-                if (n <= 0) {
-                    alert("you won!!!")
-                }
+        //---------------------------------------------------------------
+        var first_character = thing.charAt(i);
+        console.log(first_character)
+        if (letter === first_character) {
+            spaces[i] = letter;
+            n--
+            console.log("this is it" + n)
+    
+            if (n <= 0){
+                alert("you won!!!")
             }
-            document.getElementById("character-spaces").innerHTML = spaces;
         }
-
+        document.getElementById("character-spaces").innerHTML = spaces;
+    }
+       
 
         console.log(spaces)
 
@@ -84,7 +80,7 @@ for (var i = 0; i < n; i++) {
         //open araay to store used characters
         if (picture === 10) {
             tries_remaining--
-            update_try(tries_remaining)
+            update_try(tries_remaining)  
             alert("Your Dead!! Press ok to start again.")
             window.location.reload()
         }
@@ -96,21 +92,30 @@ for (var i = 0; i < n; i++) {
             if (thing.indexOf(letter) === -1) {
                 tries_remaining--;
                 picture++
-                console.log(picture + "  picture count")
+                console.log(picture + "picture count")
                 $('.game--backdrop').removeClass("game--backdrop1").addClass('game--backdrop' + picture);
-
-
+                
+               
             }
-
+            
         }
-       
-        update_try(used_characters, tries_remaining, n, thing, "")
 
-    }// endonkeyup
+        update_try(used_characters, tries_remaining, n, thing, "")
+    }
 
 
 };
 
 
 
+
+
+    // console.log(letter)
+
+
+
+
+
+
+//picture of hangman as game progresses
 
