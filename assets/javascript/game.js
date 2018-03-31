@@ -9,6 +9,7 @@ var tries_remaining = 10
 var correct_letter = 0
 var picture = 1
 //--------------------------------------------------------------
+// updates text 
 function update_try(used_characters, tries_remaining, n, thing, init) {
     //used charactor list
     var length = used_characters.length;
@@ -23,12 +24,13 @@ function update_try(used_characters, tries_remaining, n, thing, init) {
     console.log(tries_remaining);
     document.getElementById("insturctions").innerHTML = "Good luck here you go!    ";
 
-    document.getElementById("character-length").innerHTML = "Your word has    " + n + "  letters";
-    document.getElementById("character-no").innerHTML = + init;
+    document.getElementById("character-length").innerHTML = "Your word has    " + word_length + "  letters";
+    document.getElementById("character-no").innerHTML = "Your word is something played a band";
 }
 //---------------------------------------------------------------
 //number of characters
 var n = thing.length;
+var word_length = n
 console.log(n)
 
 //--------------------------------------------------------------
@@ -62,10 +64,11 @@ for (var i = 0; i < thing.length; i++){
         if (letter === first_character) {
             spaces[i] = letter;
             n--
-            // console.log("this is it" + n)
-            // if (n <= 0){
-            //     alert("you won!!!")
-            // }
+            console.log("this is it" + n)
+    
+            if (n <= 0){
+                alert("you won!!!")
+            }
         }
         document.getElementById("character-spaces").innerHTML = spaces;
     }
@@ -73,30 +76,14 @@ for (var i = 0; i < thing.length; i++){
 
         console.log(spaces)
 
-        //player wins
-        //         console.log("length  of word" + spaces.length)
-        //         if (n <= 0){
-        //             alert("you won!!!")
-        //         }
-
-        // console.log("this is it it" + n)
-
         //---------------------------------------------------------------
         //open araay to store used characters
-
-
-        // $('.game--backdrop').css('background', 'url(hangman2.jpg) no-repeat');
-        // $('.game--backdrop').css('background-size', '100% 100%');
-
-
-
-        // function SwitchPic(pic) {
-        //     var image = document.getElementsByClassName("game--backdrop");
-        //      {
-        //         image.src = "hangman2.jpg";
-        //     } 
-        // }
-
+        if (picture === 10) {
+            tries_remaining--
+            update_try(tries_remaining)  
+            alert("Your Dead!! Press ok to start again.")
+            window.location.reload()
+        }
 
 
         if (used_characters.includes(letter) == false) {
@@ -107,13 +94,10 @@ for (var i = 0; i < thing.length; i++){
                 picture++
                 console.log(picture + "picture count")
                 $('.game--backdrop').removeClass("game--backdrop1").addClass('game--backdrop' + picture);
+                
                
-
             }
-            if (picture === 11) {
-                alert("Your Dead!! Press ok to start again.")
-                window.location.reload()
-            }
+            
         }
 
         update_try(used_characters, tries_remaining, n, thing, "")
