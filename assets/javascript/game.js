@@ -44,8 +44,6 @@ for (var i = 0; i < thing.length; i++) {
     //changes the html to show word spaces
     document.getElementById("character-spaces").innerHTML = spaces;
 
-
-
     //----------------------------------------------------------
     update_try(used_characters, tries_remaining, n, thing, "")
 
@@ -70,9 +68,6 @@ for (var i = 0; i < thing.length; i++) {
             if (letter === first_character) {
                 spaces[i] = letter;
                 n--
-
-
-
             }
             document.getElementById("character-spaces").innerHTML = spaces.join();
 
@@ -82,11 +77,7 @@ for (var i = 0; i < thing.length; i++) {
                     setTimeout(function () {
                         alert("you won!!!");
                     }, 50);
-
-
                 }
-
-
             }
         }
 
